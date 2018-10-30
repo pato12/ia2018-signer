@@ -1,0 +1,11 @@
+button {
+  background: rgb(50, 81, 109);
+  color: white;
+  padding: 5px 15px;
+  font-size: 18px;
+  border: none;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
