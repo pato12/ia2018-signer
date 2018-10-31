@@ -8,6 +8,10 @@ export default class Sign extends React.Component {
   componentDidMount() {
     window.addEventListener("resize", this.updateDimensions);
     this.updateDimensions();
+
+    if (this.canvas && this.canvas.canvas) {
+      this.canvas.canvas.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
+    }
   }
 
   componentWillUnmount() {
@@ -19,7 +23,6 @@ export default class Sign extends React.Component {
 
     this.setState({ width });
   }
-
 
   render() {
     const { width } = this.state;
